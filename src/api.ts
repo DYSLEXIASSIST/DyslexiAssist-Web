@@ -53,4 +53,11 @@ export const api = {
       return response.data;
     }
   }
+  export interface ContrastResult {
+  // Example fields – adjust based on your API response
+    colorCombination: string;
+    contrastLevel: string;
+    readabilityScore: number;
+  }
+
 };
