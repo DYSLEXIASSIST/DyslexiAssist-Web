@@ -42,8 +42,10 @@ export const api = {
 
   contrastTest: {
     start: async (): Promise<ContrastResult> => {
-      const response = await axios.post(`${API_BASE_URL}/contrast-test/start`);
-      return response.data;
+    const response = await axios.post<ContrastResult>(`${API_BASE_URL}/contrast-test/start`);
+    return response.data;
+    },
+
     },
 
     submitFeedback: async (rating: number): Promise<ContrastResult> => {
